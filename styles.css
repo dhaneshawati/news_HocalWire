@@ -1,0 +1,667 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Times New Roman', Times, serif;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+.container{
+    width: 100vw;
+    height: 31.5rem;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    background-color: rgb(250, 248, 248)
+}
+.poster{
+    height: 95%;
+    width: 50%;
+    margin: 0.625rem;
+    position: relative;
+}
+img{
+    height: 100%;
+    width: 100%;
+    border-radius: 1rem;
+    filter: contrast(0.8) brightness(0.6);
+}
+.news{
+    height: 95%;
+    width: 56%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    row-gap: 1.89rem;
+    padding: 0px 1.26rem;
+}
+.first,.second{
+    display: flex;
+    height: 50%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    column-gap: 1.89rem;
+}
+.article{
+    width: 100%;
+    height: 100%;
+    border: 1px solid lightgray;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    border-radius: 0.625rem;
+    padding: 0.625rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.13rem;
+}
+.article p{
+    font-size: 16px;
+}
+.article .top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.article .top .group_icons{
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+.top .category{
+    height: 1.25rem;
+    width: fit-content;
+    background-color: rgb(247, 245, 243);
+    padding: 1px 0.5rem;
+    border-radius: 0.315rem;
+}
+.top .special{
+    height: 1.25rem;
+    width: fit-content;
+    background-color: white;
+    padding: 1px 0.5rem;
+    border-radius: 0.315rem;
+}
+.top .category span{
+    font-weight: 600;
+    color: rgb(179, 132, 46);
+    font-size: 14px;
+}
+.top .special .current{
+    color: black;
+}
+.share i{
+    font-size: small;
+    color: rgb(216, 80, 80);
+}
+.banner{
+    height: 22.5%;
+    width: 100%;
+    background-color:rgba(0, 0, 0,0.2);
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.625rem;
+    padding: 1.25rem;
+    position: absolute;
+    bottom: 0;
+    border-radius: 1rem;
+}
+.banner h3{
+    color: white;
+    font-size: 17px;
+}
+.banner .category{
+    height: 1.25rem;
+    width: fit-content;
+    padding: 1px 0.5rem;
+    border-radius: 0.315rem;
+    background-color: gray;
+}
+.banner .category span {
+    color: white;
+    font-size: 14px;
+}
+.banner p{
+    color: rgb(163, 160, 160);
+    font-size: 16px;
+    font-weight: 500;
+}
+.share_circle{
+    position: absolute;
+    top: 2.142rem;
+    right: 1.76rem;
+    background-color: white;
+    border-radius: 50%;
+    width: 1.13rem;
+    height: 1.13rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.share_circle i{
+    font-size: small;
+    color: rgb(216, 80, 80);
+}
+@media screen  and (max-width: 375px){
+    .container{
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    }
+    .poster{
+        height: 100%;
+        width: 100%;
+    }
+    .news{
+        height: 100%;
+        width: 100%;
+        row-gap: 0.625rem;
+    }
+    .first,.second{
+        display: flex;
+        column-gap: 0.625rem;
+    }
+    .article{
+        font-size: x-small;
+        padding: 0.3rem;
+        row-gap: 0.5rem;
+    }
+    .article .content h3{
+        font-size: x-small;
+    }
+    .article p{
+        font-size: x-small;
+    }
+    .article .top{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .top .category span{
+        font-size: xx-small;
+    }
+    .share i,.more i{
+        font-size: xx-small;
+    }
+    .top .category,.top .special{
+        height: fit-content;
+        border-radius: 0.2rem;
+    }
+    .banner{
+        padding: 0.625rem;
+        row-gap: 0.25rem;
+        height: fit-content;
+    }
+    .banner h3{
+        font-size: x-small;
+    }
+    .banner p{
+        font-size: x-small;
+    }
+    .banner .category{
+        height: fit-content;
+        width: fit-content;
+        padding: 1px 0.5rem;
+        border-radius: 0.2rem;
+        background-color: gray;
+    }
+    .banner .category span {
+        color: white;
+        font-size: xx-small;
+    }
+    .share_circle{
+        position: absolute;
+        top: 1.125em;
+        right: 0.5rem;
+        background-color: white;
+        border-radius: 50%;
+        width: 1rem;
+        height: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .share_circle i{
+        font-size: xx-small;
+        color: rgb(216, 80, 80);
+    }
+}
+@media screen and (min-width: 376px) and (max-width: 425px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    }
+    .poster{
+        height: 100%;
+        width: 100%;
+    }
+    .news{
+        height: 100%;
+        width: 100%;
+        row-gap: 0.625rem;
+    }
+    .first,.second{
+        display: flex;
+        column-gap: 0.625rem;
+    }
+    .article{
+        font-size: x-small;
+        padding: 0.3rem;
+        row-gap: 0.5rem;
+    }
+    .article .content h3{
+        font-size: x-small;
+    }
+    .article p{
+        font-size: x-small;
+    }
+    .article .top{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .top .category span{
+        font-size: xx-small;
+    }
+    .share i,.more i{
+        font-size: xx-small;
+    }
+    .top .category,.top .special{
+        height: fit-content;
+        border-radius: 0.2rem;
+    }
+    .banner{
+        padding: 0.625rem;
+        row-gap: 0.5rem;
+        height: fit-content;
+    }
+    .banner h3{
+        font-size: x-small;
+    }
+    .banner p{
+        font-size: x-small;
+    }
+    .banner .category{
+        height: fit-content;
+        width: fit-content;
+        padding: 1px 0.5rem;
+        border-radius: 0.2rem;
+        background-color: gray;
+    }
+    .banner .category span {
+        color: white;
+        font-size: xx-small;
+    }
+    .share_circle{
+        position: absolute;
+        top: 1.125em;
+        right: 0.8rem;
+        background-color: white;
+        border-radius: 50%;
+        width: 1rem;
+        height: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .share_circle i{
+        font-size: xx-small;
+        color: rgb(216, 80, 80);
+    }
+    
+}
+@media screen and (min-width: 426px) and (max-width: 576px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    }
+    .poster{
+        height: 50%;
+        width: 100%;
+    }
+    .news{
+        height: 100%;
+        width: 100%;
+        row-gap: 0.625rem;
+    }
+    .first,.second{
+        display: flex;
+        column-gap: 0.625rem;
+    }
+    .article{
+        font-size: small;
+        padding: 0.3rem;
+        row-gap: 0.5rem;
+    }
+    .article .content h3{
+        font-size: x-small;
+    }
+    .article p{
+        font-size: x-small;
+    }
+    .article .top{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .top .category span{
+        font-size: x-small;
+    }
+    .share i,.more i{
+        font-size: x-small;
+    }
+    .top .category,.top .special{
+        height: fit-content;
+        border-radius: 0.2rem;
+    }
+    .banner{
+        padding: 0.625rem;
+        row-gap: 0.5rem;
+        height: fit-content;
+    }
+    .banner h3{
+        font-size: small;
+    }
+    .banner p{
+        font-size: x-small;
+    }
+    .banner .category{
+        height: fit-content;
+        width: fit-content;
+        padding: 1px 0.5rem;
+        border-radius: 0.2rem;
+        background-color: gray;
+    }
+    .banner .category span {
+        color: white;
+        font-size: x-small;
+    }
+    .share_circle{
+        position: absolute;
+        top: 1.125em;
+        right: 1rem;
+        background-color: white;
+        border-radius: 50%;
+        width: 1rem;
+        height: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .share_circle i{
+        font-size: xx-small;
+        color: rgb(216, 80, 80);
+    }
+}
+@media screen and (min-width: 490px) and (max-width: 550px) {
+    .share_circle{
+        right: 1.25rem;
+    }
+}
+@media screen and (min-width: 551px) and (max-width: 576px) {
+    .share_circle{
+        right: 1.5rem;
+    }
+}
+@media screen and (min-width: 577px) and (max-width: 768px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+        height: 95vh;
+    }
+    .poster{
+        height: 40%;
+        width: 90%;
+    }
+    .news{
+        height: 100%;
+        width: 100%;
+        row-gap: 0.625rem;
+    }
+    .first,.second{
+        display: flex;
+        column-gap: 0.625rem;
+    }
+    .article{
+        font-size: small;
+        padding: 0.3rem;
+        row-gap: 0.5rem;
+    }
+    .article .content h3{
+        font-size: small;
+    }
+    .article p{
+        font-size: small;
+    }
+    .article .top{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .top .category span{
+        font-size: x-small;
+    }
+    .share i,.more i{
+        font-size: x-small;
+    }
+    .top .category,.top .special{
+        height: fit-content;
+        border-radius: 0.2rem;
+    }
+    .banner{
+        padding: 0.625rem;
+        row-gap: 0.625rem;
+        height: fit-content;
+        border-top: none;
+    }
+    .banner h3{
+        font-size: small;
+    }
+    .banner p{
+        font-size: small;
+    }
+    .banner .category{
+        height: fit-content;
+        width: fit-content;
+        padding: 1px 0.5rem;
+        border-radius: 0.2rem;
+        background-color: gray;
+    }
+    .banner .category span {
+        color: white;
+        font-size: x-small;
+    }
+    .share_circle{
+        position: absolute;
+        top: 1rem;
+        right: 1.5rem;
+        background-color: white;
+        border-radius: 50%;
+        width: 1rem;
+        height: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .share_circle i{
+        font-size: xx-small;
+        color: rgb(216, 80, 80);
+    }
+}
+@media screen and (min-width: 680px) and (max-width: 768px) {
+    .share_circle{
+        top: 0.8rem;
+        right: 2rem
+    }
+}
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    .poster{
+        height: 90%;
+        width: 90%;
+    }
+    .news{
+        height: 100%;
+        width: 100%;
+        row-gap: 0.625rem;
+        padding: 0.625rem;
+    }
+    .first,.second{
+        display: flex;
+        column-gap: 0.625rem;
+    }
+    .article{
+        font-size: small;
+        padding: 0.625rem;
+        row-gap: 1rem;
+    }
+    .article .content h3{
+        font-size: medium;
+    }
+    .article p{
+        font-size: small;
+    }
+    .article .top{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .top .category span{
+        font-size: small;
+    }
+    .share i,.more i{
+        font-size: small;
+    }
+    .top .category,.top .special{
+        height: fit-content;
+        border-radius: 0.2rem;
+    }
+    .banner{
+        padding: 0.625rem;
+        row-gap: 0.625rem;
+        height: fit-content;
+        border-top: none;
+    }
+    .banner h3{
+        font-size: medium;
+    }
+    .banner p{
+        font-size: medium;
+    }
+    .banner .category{
+        height: fit-content;
+        width: fit-content;
+        padding: 1px 0.5rem;
+        border-radius: 0.2rem;
+        background-color: gray;
+    }
+    .banner .category span {
+        color: white;
+        font-size: small;
+    }
+    .share_circle{
+        position: absolute;
+        top: 1.625em;
+        right: 0.5rem;
+        background-color: white;
+        border-radius: 50%;
+        width: 1.25rem;
+        height: 1.25rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .share_circle i{
+        font-size: small;
+        color: rgb(216, 80, 80);
+    }
+}
+@media screen and (min-width: 993px) and (max-width: 1100px){
+    .poster{
+        height: 90%;
+        width: 90%;
+    }
+    .news{
+        height: 100%;
+        width: 100%;
+        row-gap: 0.625rem;
+        padding: 0.625rem;
+    }
+    .first,.second{
+        display: flex;
+        column-gap: 0.625rem;
+    }
+    .article{
+        font-size: small;
+        padding: 0.625rem;
+        row-gap: 1.125rem;
+    }
+    .article .content h3{
+        font-size: large;
+    }
+    .article p{
+        font-size: medium;
+    }
+    .article .top{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .top .category span{
+        font-size: small;
+    }
+    .share i,.more i{
+        font-size: small;
+    }
+    .top .category,.top .special{
+        height: fit-content;
+        border-radius: 0.2rem;
+    }
+    .banner{
+        padding: 0.625rem;
+        row-gap: 0.625rem;
+        height: fit-content;
+        border-top: none;
+    }
+    .banner h3{
+        font-size: large;
+    }
+    .banner p{
+        font-size: medium;
+    }
+    .banner .category{
+        height: fit-content;
+        width: fit-content;
+        padding: 1px 0.5rem;
+        border-radius: 0.2rem;
+        background-color: gray;
+    }
+    .banner .category span {
+        color: white;
+        font-size: small;
+    }
+    .share_circle{
+        position: absolute;
+        top: 1.625em;
+        right: 1rem;
+        background-color: white;
+        border-radius: 50%;
+        width: 1.25rem;
+        height: 1.25rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .share_circle i{
+        font-size: small;
+        color: rgb(216, 80, 80);
+    }
+}
